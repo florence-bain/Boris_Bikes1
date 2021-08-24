@@ -1,5 +1,8 @@
 class DockingStation 
   def initialize 
   end 
-end 
 
+  def release_bike 
+  end 
+
+end   
