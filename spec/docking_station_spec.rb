@@ -1,6 +1,6 @@
-describe DockingStation 
-end 
 
+describe DockingStation do
+end 
 
 
 

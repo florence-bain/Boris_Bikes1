@@ -1,8 +1,8 @@
 class DockingStation
-  def initialize 
-    @ = 
+  def initialize  
   end 
 end 
+
 
 
 
