@@ -13,7 +13,7 @@ describe DockingStation do
     end
 
     it 'raises an error when no bikes are avalaible' do
-      expect { subject.release_bike }.to raise_error 'No bikes avalaible'
+       expect { subject.release_bike }.to raise_error 'No bikes avalaible'
     end 
   end
   
@@ -31,6 +31,18 @@ describe DockingStation do
       expect { subject.dock(Bike.new) }.to raise_error 'Docking station full'
     end
   end
+
+  describe 'initialization' do
+   subject { DockingStation.new }
+    let(:bike) { Bike.new }
+    it 'defaults capacity' do
+      described_class::DEFAULT_CAPACITY.times do
+        subject.dock(bike)
+      end
+    expect{ subject.dock(bike) }.to raise_error 'Docking station full'
+    end
+  end
+
  
    it 'has default capacity' do
     expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
